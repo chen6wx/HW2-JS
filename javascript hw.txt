@@ -1,0 +1,34 @@
+Why are closures useful in JavaScript? Give an example use case.
+Closures are useful in JavaScript because they allow variables in parent functions to be accessed even after the parent function has executed.
+An example use case would be a count variable in the parent function that needs to be accessed to determine the functionality of another function.
+
+When should you choose to use “let” or “const”
+You should choose to use “let” when you want to reassign the variable later, and you should choose to use “const” when you want to do not want to reassign the variable later.
+Give an example of a common mistake related to hoisting and explain how to fix it.
+What will the outcome of each console.log() be after the function calls? Why?
+const arr = [1, 2];
+function foo1(arg) {
+  arg.push(3);
+}
+foo1(arr);
+console.log(arr);
+
+function foo2(arg) {
+  arg = [1, 2, 3, 4];
+}
+foo2(arr);
+console.log(arr);
+
+function foo3(arg) {
+  let b = arg;
+  b.push(3);
+}
+foo3(arr);
+console.log(arr);
+
+function foo4(arg) {
+  let b = arg;
+  b = [1, 2, 3, 4];
+}
+foo4(arr);
+console.log(arr);
